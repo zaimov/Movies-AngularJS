@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="navbar navbar-default">
+            <div  class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-repeat="movie in allMovies">
+                        <a href="" ng-click="getIndex($index)">{{movie.title}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron" ng-cloak>
+    <div class="row">
+        <div class="col-md-12" >
+            <h1>{{movieInfo[0].title}}</h1>
+            <p>
+                <strong>Created:</strong> {{movieInfo[0].year}}
+            </p>
+            <p>
+                <strong>Directed By: </strong> {{movieInfo[0].director}}
+            </p>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <p>
+                        {{movieInfo[0].description}}
+                    </p>
+                </div>
+            </div>
+            <!--<div class="row text-center">   Rating for movies
+                <div class="col-md-12">
+                    Rating: {{movieInfo[0].rating}}
+                    <button class="btn btn-sm" ng-click="upVoteRating(movieInfo[0])">+</button>
+                    <button class="btn btn-sm" ng-click="downVoteRating(movieInfo[0])">-</button>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>

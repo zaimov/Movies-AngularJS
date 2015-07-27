@@ -1,0 +1,17 @@
+<div class="row" id="searchInput">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center">
+        <div search-movies></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="movie in allMovies | filter:search"
+                ng-class-odd="greyBackgroundCss">
+            <a href="#/details" ng-click="getIndex($index)">{{movie.title}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

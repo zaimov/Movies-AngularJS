@@ -1,0 +1,23 @@
+ul li{
+    list-style: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+h2 {
+    color: #77777B;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.grey-background {
+    background: #F8F8F8;
+}
+
+#searchInput {
+    margin-bottom: 1em;
+}

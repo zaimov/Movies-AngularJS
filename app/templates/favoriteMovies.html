@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-sm-6">
+        <h2>All Movies</h2>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-info"
+                ng-repeat="value in allMovies"
+                ng-click="showDetails = !showDetails"
+                ng-dblclick="transferToFavoriteMovies($index)">
+                Title:<span class="bold"> {{value.title}}</span>
+                <ul  class="inner-list" ng-show="showDetails">
+                    <li>Year: {{value.year}}</li>
+                    <li>Director: {{value.director}}</li>
+                    <li>Description: {{value.description}}</li>
+                    <li><a href="#/details" ng-click="getIndex($index)">Rate it</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <h2>My favorite Movies</h2>
+        <ul class="list-group" ui-sortable ng-model="favoriteMovies">
+            <li class="list-group-item list-group-item-info"
+                ng-repeat="value in favoriteMovies"
+                ng-click="showDetails = !showDetails"
+                ng-dblclick="transferToAllMovies($index)">
+                Title:<span class="bold"> {{value.title}}</span>
+                <ul  class="inner-list" ng-show="showDetails">
+                    <li>Year: {{value.year}}</li>
+                    <li>Director: {{value.director}}</li>
+                    <li>Description: {{value.description}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
